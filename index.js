@@ -26,15 +26,15 @@ const buildPath = path.join(_dirname, "../front/build/");
 app.use(express.static(buildPath));
 
 app.get("/", (req, res ) => {  
-
-    res.sendFile(
-        path.join(__dirname, "../front/build/index.html"),
-        function(err) {
-            if (err) { 
-                res.status(500).send(err)
-            }
-        }
-    )
+       res.send("Welcome")
+    // res.sendFile(
+    //     path.join(__dirname, "../front/build/index.html"),
+    //     function(err) {
+    //         if (err) { 
+    //             res.status(500).send(err)
+    //         }
+    //     }
+    // )
 });
 
 
